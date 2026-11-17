@@ -80,7 +80,7 @@ function Home() {
     const submitHandler = (data: FormValues) => {
         // 쿼리스트링으로 2개 이상의 값이 전달 되어야 하는 거라면
         // 각각 encodeURIComponent를 매 번 써줄 게 아니라
-        // new encodeURIComponent(객체).toString() 을 통해 한 번에 만들어주는 게 이치에 맞음
+        // new encodeURLSearchParams(객체).toString() 을 통해 한 번에 만들어주는 게 이치에 맞음
         const queryString = new URLSearchParams(data).toString();
         navigate(`/result?${queryString}`);
     }
