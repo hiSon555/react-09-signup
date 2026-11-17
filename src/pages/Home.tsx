@@ -38,7 +38,7 @@ const InputGroup = styled.div`
 
 // react-hook-form 을 사용하려면,
 // 이 컴포넌트에서 react-hook-form 이 연결해야 하는 input의 갯수와 이름을 알려줘야 함
-// 그렇게 type 을 하나 만들고, 그걸 useForm<FormValues>() 제네릭을 통해 넣어줌
+// 그렇게 type 을 하나 만들고, 그걸 useForm<FormValues>() 제네릭<>을 통해 넣어줌
 type FormValues = {
     username: string;
     password: string;
@@ -73,7 +73,7 @@ function Home() {
     // 그 도구들을 지칭해서 사용하기 위해 객체 구조 분해함
 
     // react-hook-form 이 제공한 handleSubmit 함수는 handleSubmit(우리가쓰는함수)로 onSubmit에 넣어줘야 되고
-    // onSubmit이 발동되면, 유효성 검사를 진행하고 무넺가 없으면 매개변수로 넣어준 핸들러 함수를 실행함
+    // onSubmit이 발동되면, 유효성 검사를 진행하고 문제가 없으면 매개변수로 넣어준 핸들러 함수를 실행함
 
     // 우리가 쓰는 함수는 (data: 우리가 정한 타입) => { 진행해야 하는 내용 }
     // 저 매개변수는 data에는 사용자가 입력한 값들이 객체 상태로 들어옴
